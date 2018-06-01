@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rider.name %>
+</p>
+
+<p>
+  <strong>Home:</strong>
+  <%= @rider.home %>
+</p>
+
+<p>
+  <strong>Work:</strong>
+  <%= @rider.work %>
+</p>
+
+<%= link_to 'Edit', edit_rider_path(@rider) %> |
+<%= link_to 'Back', riders_path %>

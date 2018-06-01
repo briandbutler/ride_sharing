@@ -1,0 +1,32 @@
+<%= form_with(model: rider, local: true) do |form| %>
+  <% if rider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rider.errors.count, "error") %> prohibited this rider from being saved:</h2>
+
+      <ul>
+      <% rider.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :rider_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :home %>
+    <%= form.text_area :home, id: :rider_home %>
+  </div>
+
+  <div class="field">
+    <%= form.label :work %>
+    <%= form.text_area :work, id: :rider_work %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
