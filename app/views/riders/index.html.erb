@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Description</th>
       <th>Home</th>
       <th>Work</th>
       <th colspan="3"></th>
@@ -16,6 +17,7 @@
     <% @riders.each do |rider| %>
       <tr>
         <td><%= rider.name %></td>
+        <td><%= rider.description %></td>
         <td><%= rider.home %></td>
         <td><%= rider.work %></td>
         <td><%= link_to 'Show', rider %></td>
